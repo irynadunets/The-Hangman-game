@@ -27,6 +27,7 @@ export function Game() {
   const startGame = () => {
     dispatch(setRandomWord());
     setGame(true);
+    setGuessedLetter("");
   };
   const checkLetter = () => {
     dispatch(checkGuessedLetter(letter));
@@ -35,6 +36,7 @@ export function Game() {
   const newGame = () => {
     setGame(false);
     dispatch(restartGame());
+    setGuessedLetter("");
   };
 
   return (
